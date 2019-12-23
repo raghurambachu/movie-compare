@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Movie Mania</title>
+        {{!-- typography --}}
+      <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu&display=swap" rel="stylesheet">
+
+        {{!-- Bulma css --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+
+        {{!-- font-awesome --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+        {{!-- custom css --}}
+        <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+        {{!-- start of movie container --}}
+      <div class="movie-container">
+
+                {{>header}}
+                {{!-- Start of  main-container --}}
+                <div class="main-container">    
+
+                        <div class="columns">
+
+                                <div class="column is-half">
+                                                <div id="left-autocomplete">
+
+                                                </div>
+                                                <div id="left-summary">
+                                                </div>
+                                </div>
+
+                                <div class="column is-half">
+
+                                                <div id="right-autocomplete">
+
+                                                </div>
+                                                <div id="right-summary">
+                                                </div>
+
+                                </div>
+
+                        </div>
+
+                        
+
+                                        
+
+                </div>
+                {{!-- end of main container --}}
+
+                {{>footer}}
+
+
+      </div>
+      {{!-- end of movie container --}}
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+        <script src="./js/utils/debounce.js"></script>
+        <script src="./js/utils/autocomplete.js"></script>
+        <script src="./js/app.js"></script>
+</body>
+</html>
+
+        
