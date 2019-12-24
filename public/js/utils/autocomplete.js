@@ -28,11 +28,11 @@ const createAutoComplete = ({ root, fetchData, displayList, fetchDetails }) => {
 			for (let item of items) {
 				displayList(item, resultsDOM);
 			}
-			const options = resultsDOM.querySelectorAll('a div');
+			const options = resultsDOM.querySelectorAll('.items');
 			options.forEach((option) => {
 				option.addEventListener('click', () => {
 					dropdownDOM.classList.remove('is-active');
-					inputDOM.value = option.innerText;
+					inputDOM.value = option.querySelector('img').getAttribute('alt');
 					fetchDetails(option);
 				});
 			});

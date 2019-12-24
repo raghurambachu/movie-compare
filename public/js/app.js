@@ -138,9 +138,9 @@ createAutoCompleteConfig = {
 		//console.log(movie)
 		const moviePoster = movie.Poster === 'N/A' ? 'https://via.placeholder.com/150' : movie.Poster;
 		resultDOM.innerHTML += `
-                       <a class="dropdown-item items" href="#" >
-                               <img class="list-img" src="${moviePoster}">
-                               <div id="${movie.imdbID}"> ${movie.Title}</div>
+                       <a class="dropdown-item items" id="${movie.imdbID}">
+                               <img class="list-img" src="${moviePoster}"  alt="${movie.Title}"/>
+                                ${movie.Title}
                                (${movie.Year})
                        </a>
                `;
